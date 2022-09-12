@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
 body{
     background: linear-gradient(to right, black, rgb(91, 163, 91), black);
     color: white;
+    font-family: "Josefin Sans";
 }
 h1{
     text-align: center;
