@@ -1,0 +1,62 @@
+body{
+    background: linear-gradient(to right, black, rgb(91, 163, 91), black);
+    color: white;
+}
+h1{
+    text-align: center;
+    font-size: 48px;
+}
+h2{
+    text-align: center;
+}
+#teclas{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 100px;
+}
+#recebe-numero{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+#teclas > input{
+    width: 50px;
+    text-align: center; 
+    margin: 30px;
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+#recebe-numero > label{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#recebe-numero > input{
+    width: 50px;
+    text-align: center;
+    margin: 20px 20px 20px 0px;
+    padding: 3px;
+    border: 2px solid black;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+#cinco-maiores{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+#cinco-maiores> input{
+    width: 50px;
+    text-align: center;
+    margin: 20px;
+}
