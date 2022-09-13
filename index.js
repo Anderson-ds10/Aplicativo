@@ -8,7 +8,12 @@ let rn6 = document.querySelector("#rn6");
 let rn7 = document.querySelector("#rn7");
 let rn8 = document.querySelector("#rn8");
 let rn9 = document.querySelector("#rn9");
-
+let btnAtualiza = document.querySelector("#btn-mostra")
+let camp1 = document.querySelector("#primeiro")
+let camp2 = document.querySelector("#segundo")
+let camp3 = document.querySelector("#terceiro")
+let camp4 = document.querySelector("#quarto")
+let camp5 = document.querySelector("#quinto")
 
 conta()
 function conta (){
@@ -34,47 +39,108 @@ let count6 = 0;
 let count7 = 0;
 let count8 = 0;
 let count9 = 0;
-
+let lista = [0,0,0,0,0,0,0,0,0];
 
 function acrescentar0(){
     count0++
     rn0.value = count0
+    lista[0] = count0
 }
 function acrescentar1(){
     count1++
     rn1.value = count1
+    lista[1] = count1
 }
 function acrescentar2(){
     count2++
     rn2.value = count2
+    lista[2] = count2
 }
 function acrescentar3(){
     count3++
     rn3.value = count3
+    lista[3] = count3
 }
 function acrescentar4(){
     count4++
     rn4.value = count4
+    lista[4] = count4
 }
 function acrescentar5(){
     count5++
     rn5.value = count5
+    lista[5] = count5
 }
 function acrescentar6(){
     count6++
     rn6.value = count6
+    lista[6] = count6
 }
 function acrescentar7(){
     count7++
     rn7.value = count7
+    lista[7] = count7
 }
 function acrescentar8(){
     count8++
     rn8.value = count8
+    lista[8] = count8
 }
 function acrescentar9(){
     count9++
     rn9.value = count9
+    lista[9] = count9
 }
 
-let listaDinamica = []
+function btnMostra(){
+    lista
+    maiorNumero()
+}
+
+function maiorNumero(){
+    let maior = 0
+    let smaior = 0
+    let tmaior = 0
+    let quamaior = 0
+    let quimaior = 0
+    
+    for(let i = 0; i < lista.length; i++){
+        let number = lista[i]
+        if(number > maior){
+            maior = number
+        }
+    }
+    camp1.value = lista.indexOf(maior)
+
+    for(let i = 0; i < lista.length; i++){
+        let number1 = lista[i]
+        if(number1 > smaior && number1 != maior){
+            smaior = number1
+        }
+    }
+    camp2.value = lista.indexOf(smaior)
+
+    for(let i = 0; i < lista.length; i++){
+        let number3 = lista[i]
+        if(number3 > tmaior && number3 != maior && number3 != smaior){
+            tmaior = number3
+        }
+    }
+    camp3.value = lista.indexOf(tmaior)
+
+    for(let i = 0; i < lista.length; i++){
+        let number4 = lista[i]
+        if(number4 > quamaior && number4 != maior && number4 != smaior && number4 != tmaior){
+            quamaior = number4
+        }
+    }
+    camp4.value = lista.indexOf(quamaior)
+
+    for(let i = 0; i < lista.length; i++){
+        let number5 = lista[i]
+        if(number5 > quimaior && number5 != maior && number5 != smaior && number5 != tmaior && number5 != quamaior){
+            quimaior = number5
+        }
+    }
+    camp5.value = lista.indexOf(quimaior)
+}
