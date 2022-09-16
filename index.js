@@ -108,39 +108,73 @@ function maiorNumero(){
         let number = lista[i]
         if(number > maior){
             maior = number
+            camp1.value = lista.indexOf(maior)
         }
     }
-    camp1.value = lista.indexOf(maior)
 
     for(let i = 0; i < lista.length; i++){
         let number1 = lista[i]
-        if(number1 > smaior && number1 != maior){
-            smaior = number1
+        let descobre;
+        descobre = lista.indexOf(maior)
+        descobre = descobre + 1;
+        if(maior == lista[lista.indexOf(number1, [descobre])]){
+            alert(`Impasse na casa ${lista.indexOf(maior)} e ${lista.indexOf(number1, [descobre])}`)
+            smaior = lista[lista.indexOf(number1, [descobre])]
+            camp2.value = lista.indexOf(smaior, [descobre]);
+            break
+        }else{
+            if(number1 > smaior && number1 != maior){
+                smaior = number1;
+                camp2.value = lista.indexOf(smaior)
+            }
         }
     }
-    camp2.value = lista.indexOf(smaior)
 
     for(let i = 0; i < lista.length; i++){
         let number3 = lista[i]
-        if(number3 > tmaior && number3 != maior && number3 != smaior){
+        let descobre2;
+        descobre2 = lista.indexOf(smaior)
+        descobre2 = descobre2 + 1;
+        if(smaior == lista[lista.indexOf(number3, [descobre2])]){
+            alert(`Impasse na casa ${lista.indexOf(smaior)} e ${lista.indexOf(number3, [descobre2])}`)
+            tmaior = lista[lista.indexOf(number3, [descobre2])]
+            camp3.value = lista.indexOf(number3, [descobre2])
+            break
+        }else if(number3 > tmaior && number3 != maior && number3 != smaior){
             tmaior = number3
+            camp3.value = lista.indexOf(tmaior)
         }
     }
-    camp3.value = lista.indexOf(tmaior)
 
     for(let i = 0; i < lista.length; i++){
         let number4 = lista[i]
-        if(number4 > quamaior && number4 != maior && number4 != smaior && number4 != tmaior){
+        let descobre4;
+        descobre4 = lista.indexOf(tmaior)
+        descobre4 = descobre4 + 1;
+        if(tmaior == lista[lista.indexOf(number4, [descobre4])]){
+            alert(`Impasse na casa ${lista.indexOf(tmaior)} e ${lista.indexOf(number4, [descobre4])}`)
+            quamaior = lista[lista.indexOf(number4, [descobre4])]
+            camp4.value = lista.indexOf(number4, [descobre4])
+            break
+        }else if(number4 > quamaior && number4 != maior && number4 != smaior && number4 != tmaior){
             quamaior = number4
+            camp4.value = lista.indexOf(quamaior)
         }
-    }
-    camp4.value = lista.indexOf(quamaior)
+    } 
 
     for(let i = 0; i < lista.length; i++){
         let number5 = lista[i]
-        if(number5 > quimaior && number5 != maior && number5 != smaior && number5 != tmaior && number5 != quamaior){
+        let descobre5;
+        descobre5 = lista.indexOf(quamaior)
+        descobre5 = descobre5 + 1;
+        if(quamaior == lista[lista.indexOf(number5, [descobre5])]){
+            alert(`Impasse na casa ${lista.indexOf(quamaior)} e ${lista.indexOf(number5, [descobre5])}`)
+            quimaior = lista[lista.indexOf(number5, [descobre5])]
+            camp5.value = lista.indexOf(number5, [descobre5])
+            break
+        }else if(number5 > quimaior && number5 != quamaior && number5 != tmaior && number5 != smaior && number5 != maior){
             quimaior = number5
+            camp5.value = lista.indexOf(quimaior)
         }
     }
-    camp5.value = lista.indexOf(quimaior)
 }
