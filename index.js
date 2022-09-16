@@ -122,11 +122,9 @@ function maiorNumero(){
             smaior = lista[lista.indexOf(number1, [descobre])]
             camp2.value = lista.indexOf(smaior, [descobre]);
             break
-        }else{
-            if(number1 > smaior && number1 != maior){
-                smaior = number1;
-                camp2.value = lista.indexOf(smaior)
-            }
+        }else if(number1 > smaior && number1 != maior){
+            smaior = number1;
+            camp2.value = lista.indexOf(smaior)
         }
     }
 
