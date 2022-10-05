@@ -117,7 +117,7 @@ function maiorNumero(){
         let descobre;
         descobre = lista.indexOf(maior)
         descobre = descobre + 1;
-        if(maior == lista[lista.indexOf(number1, [descobre])]){
+        if(maior == lista[lista.indexOf(number1, [descobre])] && lista.indexOf(maior) != lista.indexOf(number1, [descobre])){
             alert(`Impasse na casa ${lista.indexOf(maior)} e ${lista.indexOf(number1, [descobre])}`)
             smaior = lista[lista.indexOf(number1, [descobre])]
             camp2.value = lista.indexOf(smaior, [descobre]);
@@ -132,8 +132,9 @@ function maiorNumero(){
         let number3 = lista[i]
         let descobre2;
         descobre2 = lista.indexOf(smaior)
+        console.log(lista.indexOf(smaior))
         descobre2 = descobre2 + 1;
-        if(smaior == lista[lista.indexOf(number3, [descobre2])]){
+        if(smaior == lista[lista.indexOf(number3, [descobre2])] && lista.indexOf(smaior) != lista.indexOf(number3, [descobre2])){
             alert(`Impasse na casa ${lista.indexOf(smaior)} e ${lista.indexOf(number3, [descobre2])}`)
             tmaior = lista[lista.indexOf(number3, [descobre2])]
             camp3.value = lista.indexOf(number3, [descobre2])
